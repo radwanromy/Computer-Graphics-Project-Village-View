@@ -478,7 +478,7 @@ glPopMatrix(); m+=8;
 	{
 		float pi=3.1416;
 		float A=(i*2*pi)/200;
-		float r=300;
+		float r=40;
 		float x = r * cos(A);
 		float y = r * sin(A);
 		glVertex2f(x,y );
