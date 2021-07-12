@@ -146,7 +146,8 @@ glPopMatrix(); m+=80;
 	if(_moon==800){
         night=false;
         //glClearColor(0.0,0.5,0.8,1.0);
-
+  //sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\day.wav",SND_ASYNC|SND_LOOP);
+      //  sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\day.wav",SND_MEMORY|SND_ASYNC);
         //_sun==0;
         for(_sun=0;_sun>=380;++_sun){
         glPushMatrix();
@@ -154,7 +155,8 @@ glPopMatrix(); m+=80;
 	glTranslatef(0,-_sun,0);
 	if(_sun==380){
         night=true;
-
+ //sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_ASYNC|SND_LOOP);
+      //  sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_MEMORY|SND_ASYNC);
 
 	}
 
@@ -172,6 +174,8 @@ glPopMatrix(); m+=80;
 	glEnd();
 	glPopMatrix();
 	if(night=true){
+  //            sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_ASYNC|SND_LOOP);
+    //    sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_MEMORY|SND_ASYNC);
 
             glPushMatrix();
 
@@ -180,6 +184,8 @@ glPopMatrix(); m+=80;
 	glTranslatef(0,-_moon,0);
 	if(_moon==600){
         night=false;
+     //     sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\day.wav",SND_ASYNC|SND_LOOP);
+    //    sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\day.wav",SND_MEMORY|SND_ASYNC);
         //glClearColor(0.0,0.5,0.8,1.0);
         glBegin(GL_POLYGON);
     glColor3ub(175,238,238);
@@ -212,6 +218,7 @@ glPopMatrix(); m+=80;
 
 	} }
 	}
+
 	glBegin(GL_POLYGON);
 	glColor3ub(175,238,238);
 	for(int i=0;i<200;i++)
@@ -813,8 +820,11 @@ glTranslatef(100,-30,0);
 	if(_sun==380){
         night=true;
 
-
+ // sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_ASYNC|SND_LOOP);
+      //  sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_MEMORY|SND_ASYNC);
 	}
+	//  sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_ASYNC|SND_LOOP);
+   //     sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_MEMORY|SND_ASYNC);
 	glBegin(GL_POLYGON);
     glColor3ub(218,165,32);
 	for(int i=0;i<200;i++)
@@ -15290,6 +15300,7 @@ if(night){
     glFlush();
 
 }
+
 }
 
 void myKeyboard(unsigned char key, int x, int y){
@@ -15315,8 +15326,10 @@ void myKeyboard(unsigned char key, int x, int y){
     case 'r':
         rainday = true;
         Rain(_rain);
-        sndPlaySound("River.wav",SND_ASYNC|SND_LOOP);
-        sndPlaySound("River.wav",SND_MEMORY|SND_ASYNC);
+       sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\rain-01.wav",SND_ASYNC|SND_LOOP);
+        //sndPlaySound("Position\\rain-01.wav",SND_ASYNC|SND_LOOP);
+        sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\rain-01.wav",SND_MEMORY|SND_ASYNC);
+       // sndPlaySound("Position\\rain-01.wav",SND_MEMORY|SND_ASYNC);
         break;
 
     case 'e':
@@ -15327,11 +15340,18 @@ void myKeyboard(unsigned char key, int x, int y){
     case 'n':
         night = true;
         Night(_nt);
+        sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_ASYNC|SND_LOOP);
+        sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\night.wav",SND_MEMORY|SND_ASYNC);
 
         break;
 
     case 'b':
+
         night = false;
+        sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\day.wav",SND_ASYNC|SND_LOOP);
+        sndPlaySound("C:\\Users\\RadwanRomy\\Downloads\\project village\\day.wav",SND_MEMORY|SND_ASYNC);
+
+
         glClearColor(0.0,0.5,0.8,1.0);
 
         break;
